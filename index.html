@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Alabay World</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;display=swap" rel="stylesheet"/>
+
+        <style>
+            @font-face {
+                font-family: 'Super Little Shadow Regular';
+                src: url('fonts/SuperLittleShadowRegular.ttf') format('truetype'); /* Adjust the path as necessary */
+                font-weight: normal;
+                font-style: normal;
+            }
+            
+            
+            body {
+                background-color: yellow; /* Overridden to yellow as per instruction */
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                height: 200vh; /* Make sure there is enough height for scrolling */
+                background-color: yellow;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 50px;
+            }
+            /* Styles from History of Alabay */
+            .history-container {
+                background-color: #ffcc4d;
+                padding: 20px;
+                border-radius: 10px;
+                margin: 50px auto;
+                text-align: center;
+                max-width: 800px;
+                position: relative;
+            }
+            .history-container img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+            .history-title {
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: #ff6f61;
+            }
+            .history-subtitle {
+                font-size: 4rem;
+                font-weight: bold;
+                color: #ffffff;
+            }
+            .history-description {
+                font-size: 1.2rem;
+                color: #333333;
+                margin-top: 20px;
+            }
+            /* Styles from Project Vision */
+            .project-vision-content {
+                text-align: center;
+                margin: 50px auto;
+                max-width: 800px;
+            }
+            .project-tabs {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+            .project-tabs div {
+                margin: 0 10px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .project-tabs .active {
+                color: #ffd700;
+            }
+            .project-carousel {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .project-carousel img {
+                width: 200px;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 10px;
+                margin: 0 10px;
+            }
+            .project-carousel .arrow {
+                background-color: #000;
+                color: #fff;
+                border: none;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+            .project-vision-title {
+                font-size: 48px;
+                font-weight: bold;
+                color: #ffd700;
+                margin-top: 20px;
+            }
+            /* Styles from Alabay World */
+            .alabay-world-container {
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                width: 80%;
+                max-width: 800px;
+                margin: 50px auto;
+            }
+            .alabay-image-container {
+                position: relative;
+                width: 100%;
+                padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            }
+            .alabay-image-container img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .alabay-content {
+                padding: 20px;
+                text-align: center;
+                background-color: white;
+            }
+            .alabay-content p {
+                font-size: 18px;
+                color: #333333;
+                margin: 0;
+            }
+            /* Styles from Alapan World (first) */
+            .alapan-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .alapan-content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #fff;
+                padding: 40px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin-top: 20px;
+            }
+            .alapan-content-text {
+                max-width: 50%;
+            }
+            .alapan-content-text h2 {
+                font-size: 24px;
+                color: #333;
+            }
+            .alapan-content-text p {
+                font-size: 18px;
+                color: #333;
+                margin: 20px 0;
+            }
+            .alapan-content-text p.highlight {
+                color: #f5a623;
+                font-weight: bold;
+            }
+            .alapan-content-image {
+                max-width: 40%;
+            }
+            .alapan-content-image img {
+                width: 100%;
+                border-radius: 10px;
+            }
+            .alapan-cards {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 40px;
+            }
+            .alapan-card {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                padding: 20px;
+                width: 23%;
+            }
+            .alapan-card img {
+                width: 100%;
+                border-radius: 10px;
+            }
+            .alapan-card h3 {
+                font-size: 18px;
+                color: #333;
+                margin: 20px 0 10px;
+            }
+            .alapan-card p {
+                font-size: 14px;
+                color: #666;
+            }
+            /* Styles from Alapan World (second) */
+            .alapan-world-second-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f0f0f0;
+            }
+            .alapan-world-second-content {
+                background-color: #fdd835;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+                position: relative;
+                width: 400px;
+            }
+            .alapan-world-second-content h1 {
+                font-size: 24px;
+                color: #000;
+                margin: 0;
+            }
+            .alapan-info-box {
+                background-color: #333;
+                color: #fdd835;
+                padding: 10px;
+                border-radius: 5px;
+                margin: 10px 0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            .alapan-info-box span {
+                display: block;
+                font-size: 14px;
+                color: #fff;
+            }
+            .alapan-info-box strong {
+                font-size: 18px;
+            }
+            .alapan-image-container {
+                margin-top: 20px;
+            }
+            .alapan-image-container img {
+                width: 100%;
+                border-radius: 10px;
+            }
+           .merchandise-container {
+            background-color: white;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            position: relative;
+            margin: 50px auto;
+            display: flex; /* Ensures flex properties are applied here */
+            justify-content: center; /* Center the contents */
+            align-items: center; /* Center the contents */
+            height: 600px; /* Set fixed height */
+            background-size: cover; /* Cover background */
+            background-repeat: no-repeat; /* No repeat */
+            background-position: center; /* Center background */
+        }
+    
+        /* Additional styles for buttons */
+        .merchandise-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+        }
+    
+        .merchandise-arrow.left {
+            left: 10px; /* Left position */
+        }
+    
+        .merchandise-arrow.right {
+            right: 10px; /* Right position */
+        }
+    
+        /* Ensure merchandise image styles */
+        #merchandise-image {
+            position: relative; 
+            z-index: 1; 
+            object-fit: contain; 
+            height: 400px; /* Maintain height */
+            width: 400px; /* Maintain width */
+        }
+            /* Styles from Alarah World */
+            .alarah-container {
+                text-align: center;
+                padding: 20px;
+                max-width: 800px;
+                margin: 50px auto;
+            }
+            .alarah-header {
+                background-color: #ffcc00;
+                padding: 20px;
+                border-radius: 10px;
+                margin: 20px auto;
+                width: 80%;
+                position: relative;
+            }
+            .alarah-header p {
+                margin: 0;
+                font-size: 24px;
+                color: #000;
+            }
+            .alarah-content {
+                background-color: #ffcc00;
+                padding: 20px;
+                border-radius: 10px;
+                margin: 20px auto;
+                width: 60%;
+                position: relative;
+            }
+            .alarah-content img {
+                width: 100%;
+                border-radius: 10px;
+            }
+            .alarah-button {
+                background-color: #6a0dad;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                cursor: pointer;
+                text-decoration: none;
+                display: inline-block;
+                margin-top: 20px;
+            }
+            .alarah-button:hover {
+                background-color: #5a0cad;
+            }
+            .alarah-arrow {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                background-color: #000;
+                color: #fff;
+                padding: 10px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            /* Styles from Game Previews */
+            .game-previews-container {
+                max-width: 1200px;
+                margin: 50px auto;
+                padding: 20px;
+                background-color: #fff;
+            }
+            .game-previews-header {
+                text-align: center;
+                font-size: 2em;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            .game-previews-header span {
+                color: orange;
+            }
+            .game-previews-list {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .game-preview-item {
+                width: 30%;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+            .game-preview-item img {
+                width: 100%;
+                display: block;
+            }
+            .game-previews-arrow {
+                font-size: 2em;
+                cursor: pointer;
+            }
+            /* Styles from Social Media Links */
+            .social-media-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #2E2E2E;
+            }
+            .social-media-content {
+                background-color: white;
+                border-radius: 15px;
+                padding: 20px;
+                text-align: center;
+                position: relative;
+                width: 80%;
+                max-width: 800px;
+            }
+            .social-media-header {
+                font-size: 60px;
+                color: #F4A300;
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+            }
+            .social-media-links {
+                background: linear-gradient(145deg, #4A90E2, #357ABD);
+                border-radius: 15px;
+                padding: 20px;
+                margin-top: 20px;
+                display: inline-block;
+                text-align: left;
+                color: white;
+                font-size: 20px;
+            }
+            .social-media-links a {
+                color: white;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+            .social-media-links a i {
+                margin-right: 10px;
+            }
+            .social-media-image {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 200px;
+                height: auto;
+            }
+          
+            
+            .merchandise-header {
+                font-size: 24px; /* Header font size */
+                font-weight: bold; /* Bold text */
+                text-align: center; /* Centered text */
+                color: #4CAF50; /* Green text color */
+            }
+            
+            .discover-btn {
+                background-color: #4CAF50; /* Green button */
+                color: white; /* White text */
+                padding: 10px 20px; /* Button padding */
+                border: none; /* No border */
+                border-radius: 5px; /* Rounded button */
+                cursor: pointer; /* Pointer cursor on hover */
+            }
+            
+            .merchandise-arrow {
+                position: absolute; /* Absolute positioning for arrows */
+                top: 50%; /* Centered vertically */
+                transform: translateY(-50%); /* Adjust for actual center */
+            }
+           
+            
+        
+             .custom-font {
+                      font-family: 'Fredoka One', cursive;
+                  }
+                  body {
+                    font-family: 'Fredoka One', cursive;
+                }
+            
+            
+        </style>
+    
+</head>
+<body >
+<div id="indexContent ">
+    
+<!-- History of Alabay Section -->
+<div class="container history-container" style="background-color: white; padding: 20px;">
+    <div class="row align-items-center">
+    <div class="col-md-6 text-center">
+    <img alt="Cartoon image of a happy Alabay dog jumping" class="img-fluid" src="images/DALL·E 2024-07-14 16.40.05 - A 3D cartoon illustration of a furry Central Asian Shepherd dog jumping happily in the air. The dog should have a joyful expression with a wide smile, 2.png" height="400" />
+    </div>
+    <div class="col-md-6" style="text-align: right;">
+    <div class="history-title" style="font-size: 40px; color: orange;">
+    History Of
+    </div>
+    <div class="history-subtitle" style="font-size: 48px; color: yellow;">
+    ALABAY
+    </div>
+    <div class="history-description" style="margin-top: 20px;">
+    The Central Asian Shepherd Dog, also known as Alabay, has been a guardian of livestock and property for centuries. Originating from Central Asia, these dogs are renowned for their courage, strength, and loyalty.
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+   <!-- Project Section -->
+   <div class="project-previews-container">
+    <div class="project-tabs" style="display: flex; margin-right:10px;">
+        <div id="allTab" class="tab active" style="color: black; ">ALL</div>
+        <div id="photosTab" class="tab">PHOTOS</div>
+        <div id="videosTab" class="tab">VIDEOS</div>
+    </div>
+    
+    <div class="project-carousel" style="display: flex; align-items: center;">
+        <button class="arrow" id="projectPrevBtn">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <div id="projectCarouselImages" style="display: flex;">
+            <!-- Images will be dynamically updated here -->
+        </div>
+        <button class="arrow" id="projectNextBtn">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+</div>
+
+
+<script>
+    // Image sources for project previews
+const projectImages = [
+"images/DALL·E 2024-07-15 01.31.03 - A full-body 3D cute cartoon illustration of a very happy furry Central Asian Shepherd dog dressed in a t-shirt with an Alabay dog printed on it and we 2.png",
+"images/DALL·E 2024-07-15 01.32.53 - A full-body 3D cute cartoon illustration of a very happy furry Central Asian Shepherd dog celebrating with a trophy. The dog should have a big smile a 1.png",
+"images/DALL·E 2024-07-15 01.33.29 - A full-body 3D cute cartoon illustration of a very happy furry Central Asian Shepherd dog dressed in a Viking outfit. The dog should have a big smile_ 1.png",
+"images/DALL·E 2024-07-29 17.36.01 - A 3D cartoon illustration of a cute furry Central Asian Shepherd dog holding a mobile phone and looking at it. The dog has expressive eyes, a fluffy c 2.png"
+];
+
+// Video sources for project previews
+const projectVideos=[
+"images/DALL·E 2024-07-29 17.36.01 - A 3D cartoon illustration of a cute furry Central Asian Shepherd dog holding a mobile phone and looking at it. The dog has expressive eyes, a fluffy c 2.png",
+"images/DALL·E 2024-07-29 17.36.01 - A 3D cartoon illustration of a cute furry Central Asian Shepherd dog holding a mobile phone and looking at it. The dog has expressive eyes, a fluffy c 2.png",
+"images/DALL·E 2024-07-29 17.36.01 - A 3D cartoon illustration of a cute furry Central Asian Shepherd dog holding a mobile phone and looking at it. The dog has expressive eyes, a fluffy c 2.png"
+]
+
+let currentProjectIndex = 0;
+const projectImagesToShow = 3; // Display 3 items at a time
+let currentTab = 'all'; // Track the current tab
+
+// Get the image container for the project carousel
+const projectCarouselImagesContainer = document.getElementById('projectCarouselImages');
+
+// Function to update displayed project images or videos
+function updateProjectCarousel() {
+projectCarouselImagesContainer.innerHTML = ""; // Clear the current items
+let itemsToShow = [];
+
+// Determine items to show based on the active tab
+if (currentTab === 'all') {
+    itemsToShow = projectImages.concat(projectVideos); // Show both images and videos
+} else if (currentTab === 'photos') {
+    itemsToShow = projectImages; // Show only images
+} else if (currentTab === 'videos') {
+    itemsToShow = projectVideos; // Show only videos
+}
+
+// Add items to the carousel
+for (let i = currentProjectIndex; i < currentProjectIndex + projectImagesToShow; i++) {
+    let itemIndex = i % itemsToShow.length; // Loop back to the start if we reach the end
+    const itemElement = document.createElement(currentTab === 'videos' || currentTab === 'all' ? (itemIndex < projectImages.length ? 'img' : 'video') : 'img');
+    
+    if (currentTab === 'videos' || currentTab === 'all') {
+        // If it's a video or if in 'ALL' mode and it's a video
+        if (itemIndex >= projectImages.length) {
+            // Adjust index for video
+            itemIndex -= projectImages.length; // Shift index for videos
+            itemElement.src = projectVideos[itemIndex];
+            itemElement.controls = true; // Add controls for video
+        } else {
+            itemElement.src = projectImages[itemIndex];
+            itemElement.alt = `Project Image ${itemIndex + 1}`;
+        }
+        itemElement.height = 150;
+        itemElement.width = 200;
+    } else {
+        // If it's just images
+        itemElement.src = itemsToShow[itemIndex];
+        itemElement.alt = `Project Image ${itemIndex + 1}`;
+        itemElement.height = 150;
+        itemElement.width = 200;
+    }
+    
+    projectCarouselImagesContainer.appendChild(itemElement);
+}
+}
+
+// Show the next set of project images or videos
+document.getElementById("projectNextBtn").addEventListener("click", function() {
+currentProjectIndex = (currentProjectIndex + 1) % (currentTab === 'photos' ? projectImages.length : projectVideos.length);
+updateProjectCarousel();
+});
+
+// Show the previous set of project images or videos
+document.getElementById("projectPrevBtn").addEventListener("click", function() {
+currentProjectIndex = (currentProjectIndex - 1 + (currentTab === 'photos' ? projectImages.length : projectVideos.length)) % (currentTab === 'photos' ? projectImages.length : projectVideos.length);
+updateProjectCarousel();
+});
+
+// Tab click events
+document.getElementById("allTab").addEventListener("click", function() {
+currentTab = 'all';
+currentProjectIndex = 0; // Reset index for a fresh view
+updateProjectCarousel();
+});
+
+document.getElementById("photosTab").addEventListener("click", function() {
+currentTab = 'photos';
+currentProjectIndex = 0; // Reset index for a fresh view
+updateProjectCarousel();
+});
+
+document.getElementById("videosTab").addEventListener("click", function() {
+currentTab = 'videos';
+currentProjectIndex = 0; // Reset index for a fresh view
+updateProjectCarousel();
+});
+
+// Initialize carousel with the first set of project images
+updateProjectCarousel();
+
+</script>
+
+<style>
+   
+    .tab:hover {
+        background-color: #e0e0e0;
+    }
+    
+</style>
+
+    
+    
+    <!-- Alabay World Section -->
+    <div style="background-image: url('https://example.com/your-background-image.jpg'); background-size: cover; padding: 20px; min-height: 400px; background-position: center; display: flex; align-items: center; justify-content: center;">
+    
+    <!-- Project Vision Container -->
+    <div style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 10px; text-align: center;">
+    <!-- Project Vision Title -->
+    <div class="project-vision-title" style="margin-bottom: 30px;">
+    <h2 style="font-size: 48px; color: yellow; font-weight: bold;">Project Vision</h2>
+    </div>
+    
+    <div>
+    <img alt="Group of animated dogs standing together" height="600" src="images/DALL·E 2024-07-14 20.01.25 - A wide 3D cartoon illustration of a group of furry Central Asian Shepherd dog friends. The dogs should have joyful expressions with wide smiles, ears_ 2.png" width="900" style="display: block; margin: 0 auto;"/>
+    </div>
+    
+    <div style="margin-top: 20px;">
+    <p style="font-size: 18px;">
+    Our mission is to honor the heritage of the Alabay by creating a vibrant, loyal, and<br> powerful community. Just as the Alabay protects its flock, we aim to build a pack that<br> stands strong together.
+    </p>
+    </div>
+    </div>
+    </div>
+    
+    
+    
+    
+    <div class="container">
+    <!-- Road Map Heading -->
+    <div class="roadmap-heading" style="text-align: left; margin-bottom: 20px;">
+    <h2 style="font-size: 48px; color:yellow">Road Map</h2>
+    </div>
+    
+    <div class="row align-items-center">
+    <div class="col-md-6 alapan-content-text">
+    <h2 style="font-size: 24px;">
+    Our journey is just beginning. Explore our roadmap to see the exciting milestones and future plans we have in store.
+    </h2>
+    <p style="font-size: 24px;color:yellow">
+    Join us as we grow and achieve new heights.
+    </p>
+    </div>
+    <div class="col-md-6 alapan-content-image text-right">
+    <img alt="Cartoon character holding a map" class="img-fluid" height="400" src="images/DALL·E 2024-07-14 21.37.17 - A 3D cartoon illustration of a very happy furry Central Asian Shepherd dog in explorer attire, standing at a crossroads and holding a map with a yello 2.png" />
+    </div>
+    </div>
+    </div>
+  
+ 
+<div class="bg-white">
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="flex space-x-4"> <!-- Add space between the columns -->
+                <div class="w-1/4 p-4 bg-yellow-400 text-center">
+                    <h2 class="text-white text-lg">
+                        Building and Initial Launch
+                    </h2>
+                    <img alt="Cartoon dog in construction outfit" class="mx-auto mb-4" height="300" src="images/DALL·E 2024-07-15 01.28.43 - A full body 3D cute cartoon illustration of a very happy furry Central Asian Shepherd dog dressed as a construction worker. The dog should have a big_ 3.png" width="200" />
+                </div>
+                <div class="w-1/4 p-4 bg-blue-200 text-center">
+                    <h2 class="text-white text-lg">
+                        Store Launch
+                    </h2>
+                    <br>
+                    <img alt="Cartoon dog in store outfit" class="mx-auto mb-4" height="300" src="images/DALL·E 2024-07-15 01.31.03 - A full-body 3D cute cartoon illustration of a very happy furry Central Asian Shepherd dog dressed in a t-shirt with an Alabay dog printed on it and we 2.png" width="200" />
+                </div>
+                <div class="w-1/4 p-4 bg-purple-400 text-center">
+                    <h2 class="text-white text-lg">
+                        Events and contests
+                    </h2>
+                    <br>
+                    <img alt="Cartoon dog with trophy" class="mx-auto mb-4" height="300" src="images/DALL·E 2024-07-15 01.32.53 - A full-body 3D cute cartoon illustration of a very happy furry Central Asian Shepherd dog celebrating with a trophy. The dog should have a big smile a 1.png" width="200" />
+                </div>
+                <div class="w-1/4 p-4 bg-red-400 text-center">
+                    <h2 class="text-white text-lg">
+                        New Features
+                    </h2>
+                    <br>
+                    <img alt="Cartoon dog in viking outfit" class="mx-auto mb-4" height="300" src="images/DALL·E 2024-07-15 01.33.29 - A full-body 3D cute cartoon illustration of a very happy furry Central Asian Shepherd dog dressed in a Viking outfit. The dog should have a big smile_ 1.png" width="200" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+  
+    
+    
+<h4 style="color: yellow; margin-bottom: 20px; font-size: 48px; margin-left: 13%; font-family: Super Little Shadow Regular" class="mt-4">
+    Tokenomics
+</h4>
+
+    
+    
+    <!-- Alapan World Second Section -->
+    <div class="container alapan-world-second-container" style="background-color: white; padding: 20px; border-radius: 10px;">
+    <div class="row align-items-end"> <!-- Add align-items-end here -->
+    <div class="col-md-6 d-flex flex-column justify-content-end mt-5" style="padding: 20px;">
+    <div class="alapan-info-box" style="margin-bottom: 15px;">
+    <span>LIQUIDITY</span>
+    <strong>RENOUNCED</strong>
+    </div>
+    <div class="alapan-info-box" style="margin-bottom: 15px;">
+    <span>CONTRACT</span>
+    <strong>RENOUNCED</strong>
+    </div>
+    <div class="alapan-info-box" style="margin-bottom: 15px;">
+    <span>TAXES</span>
+    <strong>0%</strong>
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="alapan-image-container" style="text-align: center;">
+    <img alt="Cartoon dog with a cap holding money and surrounded by stacks of cash" class="img-fluid" src="images/DALL·E 2024-07-23 00.50.44 - A 3D cartoon illustration of a furry Central Asian Shepherd Alabay dog with big eyes, wearing a cap with a dollar logo on its head and counting money_ 1.png" />
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    
+<!-- Merchandise Section with image and buttons -->
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <!-- Merchandise Container with background image and centered content -->
+    <div class="merchandise-container" id="merchandise-container"
+         style="position: relative; background-size: cover; background-repeat: no-repeat; background-position: center; width: 600px; height: 600px; display: flex; justify-content: center; align-items: center;">
+        
+        <!-- Background image set through the style, it will be changed via JavaScript -->
+        <div style="position: absolute; width: 100%; height: 100%; z-index: 0;"></div>
+
+        <!-- Merchandise image that will be centered on top of the background -->
+        <img id="merchandise-image" alt="Merchandise" height="400" width="400" style="position: relative; z-index: 1; object-fit: contain;" />
+        
+        <!-- Navigation buttons for left and right arrows -->
+        <button class="merchandise-arrow left" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; z-index: 2;">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="merchandise-arrow right" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; z-index: 2;">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</div>
+
+<script>
+    // Array of merchandise items with background images
+    const merchandiseItems = [
+        {
+            image: "images/pink tshirt.png",
+            background: "images/pink tee bck.png"
+        },
+        {
+            image: "images/black hoodie.png",
+            background: "images/black hoodie bck.png"
+        },
+        {
+            image: "images/yellow tshirt.png",
+            background: "images/yellow tee bck.png"
+        }
+    ];
+
+    // Current index for the displayed item
+    let currentIndex = 0;
+
+    // Function to update the displayed merchandise and background
+    function updateMerchandise() {
+        const merchandiseImage = document.getElementById("merchandise-image");
+        const merchandiseContainer = document.getElementById("merchandise-container");
+
+        // Update merchandise image and background
+        merchandiseImage.src = merchandiseItems[currentIndex].image;
+        merchandiseContainer.style.backgroundImage = `url(${merchandiseItems[currentIndex].background})`;
+    }
+
+    // Event listeners for the arrow buttons
+    document.querySelector(".merchandise-arrow.left").addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + merchandiseItems.length) % merchandiseItems.length;
+        updateMerchandise();
+    });
+
+    document.querySelector(".merchandise-arrow.right").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % merchandiseItems.length;
+        updateMerchandise();
+    });
+
+    // Initial display
+    updateMerchandise();
+</script>
+
+
+
+
+
+<!-- Section Title -->
+<h5 style="color: yellow; font-size: 48px; position: relative; z-index: 1; text-align: center;">
+    GAMES
+</h5>
+
+<p style="color: black; font-size:28px" class="text-center">
+    Stay tuned for upcoming games!
+</p>
+ <!-- Alarah World Section -->
+<div class="alarah-container" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
+    <!-- Background Image using a div -->
+    <div id="alarah-background" style="position: absolute; top: 0; left: 0; width: 150%; height: 100%; background-image: url('images/Alabay Guard prev gradient.png'); background-size: cover; background-position: center;"></div>
+    
+    <!-- Content Container Positioned at the Bottom -->
+    <div class="alarah-content" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center; z-index: 1; background-color: transparent;">
+    
+        <!-- Header Content -->
+        <div class="mt-5">
+            <div class="alarah-header" style="margin-bottom: 5px; background-color: transparent;"></div>
+            
+            <!-- Arrow Button -->
+            <div class="text-center mb-2" style="margin-bottom: 10px;">
+                <button class="arrow" id="projectNextBtn" style="background-color: black; color: white; border: none; padding: 10px; border-radius: 5px;">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            
+            <!-- Discover Button using Bootstrap -->
+            <a href="discover.html" class="btn btn-sm p-2 mt-3" style="margin-bottom: 10px; background-color: violet; border: none; color: white; border-radius: 50px;">
+                DISCOVER <button class="arrow" id="projectNextBtn" style="color: white;">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    // Array of background images
+    const backgrounds = [
+        'images/Alabay Guard prev gradient.png', // Add full image paths for all images
+        'images/next-background-image1.png',  
+        'images/next-background-image2.png'
+    ];
+
+    let currentBackground = 0;  // To keep track of the current image index
+
+    // Function to change the background image
+    function changeBackground() {
+        currentBackground = (currentBackground + 1) % backgrounds.length;  // Cycle to the next image
+        document.getElementById('alarah-background').style.backgroundImage = `url('${backgrounds[currentBackground]}')`;
+    }
+
+    // Add event listener to the arrow button
+    document.getElementById('projectNextBtn').addEventListener('click', changeBackground);
+</script>
+    <!-- Game Previews Section -->
+    <div class="game-previews-container">
+    <div class="game-previews-header">
+    <span>GAME</span> PREVIEWS
+    </div>
+    <div class="project-carousel" style="display: flex; align-items: center;">
+    <button class="arrow" id="gamePrevBtn">
+    <i class="fas fa-arrow-left"></i>
+    </button>
+    <div id="gameCarouselImages" style="display: flex;">
+    <!-- Images will be dynamically updated here -->
+    </div>
+    <button class="arrow" id="gameNextBtn">
+    <i class="fas fa-arrow-right"></i>
+    </button>
+    </div>
+    </div>
+    
+    <script>
+    // Image sources for game previews
+    const gameImages = [
+      "images/Abilities.png",
+      "images/artifacts.png",
+      "images/image 3 alabay guard.png"
+    ];
+    
+    let currentGameIndex = 0;
+    const gameImagesToShow = 3; // Display 3 images at a time
+    
+    // Get the image container for the carousel
+    const gameCarouselImagesContainer = document.getElementById('gameCarouselImages');
+    
+    // Function to update displayed images
+    function updateGameCarousel() {
+    gameCarouselImagesContainer.innerHTML = ""; // Clear the current images
+    for (let i = currentGameIndex; i < currentGameIndex + gameImagesToShow; i++) {
+    let imgIndex = i % gameImages.length; // Loop back to the start if we reach the end
+    const imgElement = document.createElement('img');
+    imgElement.src = gameImages[imgIndex];
+    imgElement.alt = `Carousel Image ${imgIndex + 1}`;
+    imgElement.height = 150;
+    imgElement.width = 200;
+    gameCarouselImagesContainer.appendChild(imgElement);
+    }
+    }
+    
+    // Show the next set of images
+    document.getElementById("gameNextBtn").addEventListener("click", function() {
+    currentGameIndex = (currentGameIndex + 1) % gameImages.length;
+    updateGameCarousel();
+    });
+    
+    // Show the previous set of images
+    document.getElementById("gamePrevBtn").addEventListener("click", function() {
+    currentGameIndex = (currentGameIndex - 1 + gameImages.length) % gameImages.length;
+    updateGameCarousel();
+    });
+    
+    // Initialize carousel with the first set of images
+    updateGameCarousel();
+    </script>
+    
+    
+    
+    
+        
+        
+        <div class="bg-white flex items-center justify-center min-h-screen">
+         <div class="p-8 relative max-w-4xl mx-auto">
+          <h1 class="text-6xl text-orange-500 custom-font">
+           SOCIAL MEDIA LINKS
+          </h1>
+          <div class="flex items-center mt-8">
+           <div class="bg-blue-500 text-white p-6 rounded-lg relative w-1/2 h-64 flex items-center justify-center">
+            <div class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-blue-700 w-8 h-8 rounded-full">
+            </div>
+            <ul>
+             <li class="flex items-center mb-4">
+              <i class="fab fa-twitter text-2xl mr-4">
+              </i>
+              <span class="text-xl">
+               TWITTER LINK
+              </span>
+             </li>
+             <li class="flex items-center">
+              <i class="fab fa-telegram text-2xl mr-4">
+              </i>
+              <span class="text-xl">
+               TELEGRAM LINK
+              </span>
+             </li>
+            </ul>
+           </div>
+           <div class="w-1/2 flex justify-center">
+            <img alt="Cute cartoon dog holding a smartphone" class="w-64 h-64 object-cover" height="256" src="images/DALL·E 2024-07-29 17.36.01 - A 3D cartoon illustration of a cute furry Central Asian Shepherd dog holding a mobile phone and looking at it. The dog has expressive eyes, a fluffy c 2.png" width="256"/>
+           </div>
+          </div>
+         </div>
+         </div>
+        <div class="d-flex  justify-content-center">
+            <button style="
+      background-color: #FFD700; 
+      color: black; 
+      font-weight: bold; 
+      font-size: 18px; 
+      padding: 16px 32px; 
+      border-radius: 30px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 6px 6px rgba(0,0,0,0.3); 
+      transition: all 0.3s ease; 
+      cursor: pointer;
+      border: 2px solid #FFD700;
+      text-transform: uppercase;
+    " 
+    onmouseover="this.style.backgroundColor='#FFA500'; this.style.borderColor='#FFA500';" 
+    onmouseout="this.style.backgroundColor='#FFD700'; this.style.borderColor='#FFD700';"
+    onclick="goBackToHead()">
+      Return to Main Page
+    </button>
+        </div>
+    
+  <script>
+    function goBackToHead() {
+      window.location.href = "head.html"; // Redirects back to head.html
+    }
+  </script>
+    
+    
+
+
+</div>
+
+</body>
+</html>
+<!-- Background color is yellow -->
